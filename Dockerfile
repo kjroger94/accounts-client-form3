@@ -7,4 +7,4 @@ COPY . .
 
 ENV CGO_ENABLED=0
 RUN chmod +x scripts/start.sh
-CMD ./scripts/start.sh
+CMD ./scripts/start.sh && tail -f /dev/null
