@@ -24,8 +24,8 @@ This is a go client library that interacts with the Form3 fake accounts API. It 
 The parameters can be given in any order, 
 call `NewAccountsParams()` to start initializing the params and finally `Done()` to get an object ready to be sent for creation
 ```go
-params := accountsparams.NewAccountsParams().
-		OrganisationID("cf4d943a-d535-4812-86a4-e07d7633bb60").
+params := accountsparams.NewAccountsParams(). //This generates a new account ID ingrained
+		OrganisationID("cf4d943a-d535-4812-86a4-e07d7633bb60"). //to be set in the client directly as config for an org
 		Type("accounts").
 		Name("Michael Scott").
 		Country("GB").
